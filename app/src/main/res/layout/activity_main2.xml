@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittext1"
+        android:hint="Nama Anda ..."
+        android:maxLength="30"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittext2"
+        android:hint="Nomor HP ..."
+        android:inputType="phone"
+        android:maxLength="12"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edittext1"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittext3"
+        android:hint="Alamat"
+        android:maxLength="30"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edittext2"/>
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Jenis CustomCase"
+        android:textColor="#000000"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="16sp"
+        android:layout_below="@+id/edittext3"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupNb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textview1" >
+
+        <RadioButton
+            android:id="@+id/radioHard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/radio_hard" />
+
+        <RadioButton
+            android:id="@+id/radioSoft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_soft" />
+
+        <RadioButton
+            android:id="@+id/radioHc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_hc" />
+        <RadioButton
+            android:id="@+id/radioPg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_pg" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Tambahan/Additional"
+        android:textColor="#000000"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="16sp"
+        android:layout_below="@+id/radioGroupNb"/>
+
+    <CheckBox
+        android:id="@+id/cb_fd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview2"
+        android:text="Flashdisk Karakter 90K" />
+
+    <CheckBox
+        android:id="@+id/cb_stiker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview2"
+        android:layout_toEndOf="@id/cb_fd"
+        android:text="Stiker Stitch 15K" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittext4"
+        android:hint="Keterangan . . ."
+        android:maxLength="30"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cb_stiker"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/colorAccent"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edittext4"
+        android:layout_toStartOf="@id/submit"/>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keluar"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edittext4"
+        android:layout_toEndOf="@id/submit"/>
+
+</RelativeLayout>
